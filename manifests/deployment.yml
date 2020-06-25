@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: hlbobpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hlbobpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hlbobpipelinesjavascriptdocker 
+          image: hoganlovellscr.azurecr.io/hlbobpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
